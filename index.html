@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/hero.jpg" type="image/x-icon" />
+    <script defer src="app.js"></script>
+    <title>Starwars wiki || by Tiskae</title>
+  </head>
+  <body class="body__container">
+    <header class="header">
+      <nav class="nav">
+        <img src="img/logo.png" alt="Starwars logo" class="nav__logo" />
+      </nav>
+      <div class="header__main">
+        <form action="#" class="search__form">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="Search for a character, galaxy or planet..."
+          />
+          <select class="search__options" name="" id="search__option">
+            <option value="category">Category</option>
+            <option value="people">People</option>
+            <option value="starships">Starship</option>
+            <option value="films">Film</option>
+            <option value="planets">Planet</option>
+            <option value="species">Specie</option>
+            <option value="vehicles">Vehicle</option>
+          </select>
+          <button class="search__btn">Search</button>
+        </form>
+      </div>
+    </header>
+    <main class="main__container">
+      <div class="star__tabs">
+        <button class="btn__tab btn__tab--active btn__tab--people">
+          All People
+        </button>
+        <button class="btn__tab btn__tab--starships">All Starships</button>
+        <button class="btn__tab btn__tab--films">All Films</button>
+        <button class="btn__tab btn__tab--planets">All Planets</button>
+        <button class="btn__tab btn__tab--species">All Species</button>
+        <button class="btn__tab btn__tab--vehicles">All Vehicles</button>
+      </div>
+      <div class="loader">
+        <div class="loader__box loader__box--1"></div>
+        <div class="loader__box loader__box--2"></div>
+        <div class="loader__box loader__box--3"></div>
+        <div class="loader__box loader__box--4"></div>
+        <div class="loader__box loader__box--5"></div>
+        <div class="loader__box loader__box--6"></div>
+        <div class="loader__box loader__box--7"></div>
+        <div class="loader__box loader__box--8"></div>
+        <div class="loader__box loader__box--9"></div>
+      </div>
+
+      <div class="stars">
+        <!-- <div class="error">
+          <p class="error__message">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum
+            molestiae animi dolores ut sint soluta, magnam aperiam perferendis
+            molestias placeat dolorem cupiditate adipisci eaque voluptate aut
+            iste itaque maiores voluptas.
+          </p>
+        </div> -->
+        <!-- <div class="star person">
+          <div class="star__tag">Person</div>
+          <img src="img/hero.jpg" alt="star image" class="star__image" />
+          <div class="star__details">
+            <h3 class="star__name">Luke Skywalker</h3>
+            <ul class="star__details--list">
+              <li class="star__details--item">
+                Birth year: <span>19 BBY</span>
+              </li>
+              <li class="star__details--item">Eye color: <span>blue</span></li>
+              <li class="star__details--item">Gender: <span>male</span></li>
+              <li class="star__details--item">
+                Hair color: <span>blond</span>
+              </li>
+              <li class="star__details--item">Height: <span>172</span></li>
+              <li class="star__details--item">Mass: <span>77</span></li>
+              <li class="star__details--item">Skin color: <span>fair</span></li>
+              <li class="star__details--item">
+                Created: <span>2014-12-09T13:50:51.644000Z</span>
+              </li>
+              <li class="star__details--item">
+                Edited: <span>2014-12-10T13:52:43.172000Z</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="star starship">
+          <div class="star__tag">Starship</div>
+          <img src="img/hero.jpg" alt="star image" class="star__image" />
+          <div class="star__details">
+            <h3 class="star__name">Death Star</h3>
+            <ul class="star__details--list">
+              <li class="star__details--item">MGLT: <span>10 MGLT</span></li>
+              <li class="star__details--item">
+                Cargo Capacity: <span>1000000000000</span>
+              </li>
+              <li class="star__details--item">
+                Consumables: <span>3 years</span>
+              </li>
+              <li class="star__details--item">
+                Cost In Credits: <span>1000000000000</span>
+              </li>
+              <li class="star__details--item">
+                Created: <span>2014-12-10T16:36:50.509000Z</span>
+              </li>
+              <li class="star__details--item">Crew: <span>342953</span></li>
+              <li class="star__details--item">
+                Edited: <span>2014-12-10T16:36:50.509000Z</span>
+              </li>
+              <li class="star__details--item">
+                Hyperdrive Rating: <span>4.0</span>
+              </li>
+              <li class="star__details--item">
+                Manufacturer:
+                <span
+                  >Imperial Department of Military Research, Sienar Fleet
+                  Systems</span
+                >
+              </li>
+              <li class="star__details--item">
+                Max Atmosphering Speed: <span>n/a</span>
+              </li>
+              <li class="star__details--item">
+                Model: <span>DS-1 Orbital Battle Station</span>
+              </li>
+              <li class="star__details--item">Name: <span>Death Star</span></li>
+              <li class="star__details--item">
+                Passengers: <span>843342</span>
+              </li>
+              <li class="star__details--item">Pilots: <span>nill</span></li>
+              <li class="star__details--item">
+                Starship Class: <span>Deep Space Mobile Battlestation</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="star specie">
+          <div class="star__tag">Specie</div>
+          <img src="img/hero.jpg" alt="star image" class="star__image" />
+          <div class="star__details">
+            <h3 class="star__name">Wookie</h3>
+            <ul class="star__details--list">
+              <li class="star__details--item">
+                Average Height: <span>2.1</span>
+              </li>
+              <li class="star__details--item">
+                Average Lifespan: <span>400</span>
+              </li>
+              <li class="star__details--item">
+                Classification: <span>mammal</span>
+              </li>
+              <li class="star__details--item">
+                Created: <span>2014-12-10T16:44:31.486000Z</span>
+              </li>
+              <li class="star__details--item">
+                Designation: <span>Sentient</span>
+              </li>
+              <li class="star__details--item">
+                Edited: <span>2014-12-10T16:44:31.486000Z</span>
+              </li>
+              <li class="star__details--item">
+                Eye Color: <span>blue, green, yellow, brown, golden, red</span>
+              </li>
+              <li class="star__details--item">
+                Hair Color: <span>black, brown</span>
+              </li>
+              <li class="star__details--item">
+                Language:
+                <span>Shyriiwook</span>
+              </li>
+              <li class="star__details--item">Skin Color: <span>gray</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="star film">
+          <div class="star__tag">Film</div>
+          <img src="img/hero.jpg" alt="star image" class="star__image" />
+          <div class="star__details">
+            <h3 class="star__name">A New Hope</h3>
+            <ul class="star__details--list">
+              <li class="star__details--item">
+                Characters: <span>qwert, qrtyuio, rtyui,qt</span>
+              </li>
+              <li class="star__details--item">
+                Created: <span>2014-12-10T14:23:31.880000Z</span>
+              </li>
+              <li class="star__details--item">
+                Director: <span>George Lucas</span>
+              </li>
+              <li class="star__details--item">
+                Edited: <span>2014-12-12T11:24:39.858000Z</span>
+              </li>
+              <li class="star__details--item">Episode ID: <span>4</span></li>
+              <li class="star__details--item">
+                Opening Crawl:
+                <span>
+                  It is a period of civil war.Rebel spaceships, striking from a
+                  hidden base, have their first victory against the evil
+                  Galactic Empire.During the battle, Rebelspies managed to steal
+                  secret plans to the Empire'sultimate weapon, the DEATHSTAR, an
+                  armored spacestation with enough power to destroy an entire
+                  planet.Pursued by the Empire's sinister agents, Princess Leia
+                  races home aboard her starship, custodian of the stolen plans
+                  that can save her people and restore freedom to the galaxy.
+                </span>
+              </li>
+              <li class="star__details--item">
+                Planets: <span>Earth, Mars, Jupiter, Uranus</span>
+              </li>
+              <li class="star__details--item">
+                Producer: <span>Gary Kurtz, Rick McCallum</span>
+              </li>
+              <li class="star__details--item">
+                Release Date:
+                <span>1977-05-25</span>
+              </li>
+              <li class="star__details--item">
+                Species: <span>dfghj, rdhy,dfrghj, dgthjk</span>
+              </li>
+              <li class="star__details--item">
+                Starships: <span>srtyus, awdefg,ghjd, sghjkl</span>
+              </li>
+              <li class="star__details--item">
+                Species: <span>dfghj, rdhy,dfrghj, dgthjk</span>
+              </li>
+              <li class="star__details--item">
+                vehicles: <span>Bentley, Maserati, Dodge, Rolls Royce</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="star vehicle">
+          <div class="star__tag">vehicle</div>
+          <img src="img/hero.jpg" alt="star image" class="star__image" />
+          <div class="star__details">
+            <h3 class="star__name">Sand Crawler</h3>
+            <ul class="star__details--list">
+              <li class="star__details--item">
+                Cargo Capacity: <span>50000</span>
+              </li>
+              <li class="star__details--item">
+                Consumables: <span>3 months</span>
+              </li>
+              <li class="star__details--item">
+                Cost in Credits: <span>150000</span>
+              </li>
+              <li class="star__details--item">
+                Created: <span>2014-12-10T15:36:25.724000Z</span>
+              </li>
+              <li class="star__details--item">Crew: <span>46</span></li>
+              <li class="star__details--item">
+                Edited: <span>2014-12-10T15:36:25.724000Z</span>
+              </li>
+              <li class="star__details--item">Length: <span>36.8</span></li>
+              <li class="star__details--item">
+                Manufacturer: <span>Corellia Mining Corporation</span>
+              </li>
+              <li class="star__details--item">
+                Max Atmosphering Speed:
+                <span>30</span>
+              </li>
+              <li class="star__details--item">
+                Model: <span>Digger Crawler</span>
+              </li>
+              <li class="star__details--item">Passengers: <span>30</span></li>
+              <li class="star__details--item">Pilots: <span>nill</span></li>
+              <li class="star__details--item">
+                Films: <span>dghjk, fghj, ghj, ghj</span>
+              </li>
+              <li class="star__details--item">
+                Vehicle Class: <span>wheeled</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="star planet">
+          <div class="star__tag">Planet</div>
+          <img src="img/hero.jpg" alt="star image" class="star__image" />
+          <div class="star__details">
+            <h3 class="star__name">Tatooine</h3>
+            <ul class="star__details--list">
+              <li class="star__details--item">Climate: <span>arid</span></li>
+              <li class="star__details--item">
+                Created: <span>2014-12-09T13:50:49.641000Z</span>
+              </li>
+              <li class="star__details--item">Diameter: <span>10465</span></li>
+              <li class="star__details--item">
+                Edited: <span>2014-12-15T13:48:16.167217Z</span>
+              </li>
+              <li class="star__details--item">
+                Films: <span>fg, ghsj, stghjs</span>
+              </li>
+              <li class="star__details--item">
+                Gravity:
+                <span> 1 </span>
+              </li>
+              <li class="star__details--item">
+                Orbital Period: <span>304</span>
+              </li>
+              <li class="star__details--item">
+                Population: <span>120000</span>
+              </li>
+              <li class="star__details--item">
+                Residents:
+                <span>fghsj, hyhsj, sghj</span>
+              </li>
+              <li class="star__details--item">
+                Rotation Period: <span>23</span>
+              </li>
+              <li class="star__details--item">Surface Water: <span>1</span></li>
+              <li class="star__details--item">Terrain: <span>dessert</span></li>
+            </ul>
+          </div>
+        </div> -->
+      </div>
+    </main>
+    <footer class="footer"></footer>
+  </body>
+</html>
